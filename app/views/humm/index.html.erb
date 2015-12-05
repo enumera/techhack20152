@@ -18,7 +18,11 @@
   </div>
 </div>
 
-<div>
+<div class = "row">
+  <div class = "col-md-3 col-md-offset-1">
+
+
+
 
   <div ng-if="artists" ng-hide="user">
     <h1>Artist</h1>
@@ -47,11 +51,42 @@
       </div>
     </div>
   </div>
+</div>
 
-  <div class='sky-slider'>
-    <div ng-repeat="sky in skys">
-      <img src={{sky}}>
+<div class="col-md-7">
+
+    <div class="content">
+      <div class="wrap">
+       <div id="main" role="main" >
+            <ul id="tiles">
+
+              <!-- These are our grid blocks -->
+              
+            <li ng-repeat="sky in skys">
+                  <img src={{sky}}>
+               
+              
+               
+            <!--     <img src="logo.png" width="200" height="200"> -->
+                <div class="post-info">
+                  <div class="post-basic-info">
+                    <h3><a href="#">Animation films</a></h3>
+                    <span><a href="#"><label> </label>Movies</a></span>
+                    <p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
+                  </div>
+                  <div class="post-info-rate-share">
+                    <div class="rateit">
+                      <span> </span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+      </div>
     </div>
-  </div>
 
+
+</div>
 </div>

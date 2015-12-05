@@ -6,9 +6,10 @@
 }
 #tiles {
   list-style-type: none;
-  position: relative; /** Needed to ensure items are laid out relative to this container **/
+  /*position: relative; * Needed to ensure items are laid out relative to this container **/
   margin: 0;
   padding: 0;
+  display: inline !important;
 }
 #tiles li:hover img{
 	opacity:0.8;
@@ -23,9 +24,11 @@
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
-	display: none;
+  position: relative;
+  float:left;
 	cursor: pointer;
 	border-radius: 0.2em;
+
 }
 #tiles li img{
 	border-top-left-radius:0.2em;
