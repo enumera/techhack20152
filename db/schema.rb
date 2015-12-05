@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20151205155958) do
+ActiveRecord::Schema.define(:version => 20151205164412) do
 
   create_table "skydata", :force => true do |t|
     t.string   "programmeref"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20151205155958) do
     t.string   "classification"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.text     "search_string"
   end
 
 end

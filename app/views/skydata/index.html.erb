@@ -23,6 +23,7 @@
     <th>Tags</th>
     <th>Synopsis</th>
     <th>Classification</th>
+    <th>Search string</th>
     <th></th>
     <th></th>
     <th></th>
@@ -38,6 +39,8 @@
     <td><%= skydatum.tags %></td>
     <td><%= skydatum.synopsis %></td>
     <td><%= skydatum.classification %></td>
+    <td><%= skydatum.search_string %></td>
+
     <td><%= link_to 'Show', skydatum %></td>
     <td><%= link_to 'Edit', edit_skydatum_path(skydatum) %></td>
     <td><%= link_to 'Destroy', skydatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
