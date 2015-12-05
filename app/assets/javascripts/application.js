@@ -39,5 +39,11 @@
       });
     };
 
+    $scope.searchSky = function(count){
+      $http.get('/skydata/search.json?term='+count).then(function(response){
+        
+      });
+    };
+
   }]);
 })();

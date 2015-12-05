@@ -1,6 +1,7 @@
 class Skydatum < ActiveRecord::Base
   attr_accessible :classification, :description, :genre, :name, :programmeref, :subgenre, :synopsis, :tags, :search_string, :picture_url
 
+  scope :search, -> (term) { where("search_string like ?", "#{term}%")}
 
   def self.import(file)
   	CSV.foreach(file.path, headers: true) do |row|
