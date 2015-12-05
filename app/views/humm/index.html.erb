@@ -4,8 +4,8 @@
     <h1>Artist</h1>
     <div ng-repeat="artist in artists">
       <div class="each-result" ng-click="searchSky(count)">
-
-        <div>{{artist.account.name.first}}</div>
+        <img style='height: 50px;' src={{artist.account.avatar}}>
+        <div style="display: inline;">{{artist.account.name.first}}</div>
       </div>
     </div>
   </div>
@@ -13,7 +13,8 @@
     <h1>Song</h1>
     <div ng-repeat="song in songs">
       <div class="each-result" ng-click="searchSky(count)">
-        <div>{{song.title}}</div>
+        <img style='height: 50px;' src={{song.artists[0].avatar}}>
+        <div style="display: inline;">{{song.title}}</div>
       </div>
     </div>
   </div>
@@ -21,8 +22,16 @@
     <h1>Playlist/Album</h1>
     <div ng-repeat="playlist in playlists">
       <div class="each-result" ng-click="searchSky(count)">
-        <div>{{playlist.title}}</div>
+        <img style='height: 50px;' src={{playlist.owner[0].avatar}}>
+        <div style="display: inline;">{{playlist.title}}</div>
       </div>
     </div>
   </div>
+
+  <div class='sky-slider'>
+    <div ng-repeat="sky in skys">
+      <img src={{sky}}>
+    </div>
+  </div>
+
 </div>

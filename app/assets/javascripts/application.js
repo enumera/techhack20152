@@ -29,7 +29,6 @@
     $scope.searchSongs = function(count){
       $http.get('https://api.myhumm.com/v2/songs?auth=56630bd7ae8c5030388b4567&keyword='+count+'&limit=5&offset=0').then(function(response){
         $scope.songs = response.data.data_response
-
       });
     };
 
@@ -41,7 +40,7 @@
 
     $scope.searchSky = function(count){
       $http.get('/skydata/search.json?term='+count).then(function(response){
-        
+        $scope.skys = response.data
       });
     };
 
