@@ -2,7 +2,7 @@ class SkydataController < ApplicationController
   # GET /skydata
   # GET /skydata.json
   def index
-    @skydata = Skydatum.all
+    @skydata = Skydatum.limit(10)
 
     respond_to do |format|
       format.html # index.html.erb

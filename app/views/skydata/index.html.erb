@@ -24,9 +24,9 @@
     <th>Synopsis</th>
     <th>Classification</th>
     <th>Search string</th>
+    <th> Picture</th>
     <th></th>
-    <th></th>
-    <th></th>
+
   </tr>
 
 <% @skydata.each do |skydatum| %>
@@ -41,9 +41,14 @@
     <td><%= skydatum.classification %></td>
     <td><%= skydatum.search_string %></td>
 
-    <td><%= link_to 'Show', skydatum %></td>
+    <td><div style="height:50px; width: 50px;"><%= link_to skydatum do %>
+        <img src= <%=skydatum.picture_url %> />
+        <% end %>
+    </div>
+
+    </td>
     <td><%= link_to 'Edit', edit_skydatum_path(skydatum) %></td>
-    <td><%= link_to 'Destroy', skydatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
   </tr>
 <% end %>
 </table>
