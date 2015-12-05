@@ -1,16 +1,13 @@
 Techhack20152::Application.routes.draw do
   resources :skydata do
-
+    collection do
+      get 'search'
+    end
     collection{post :import}
 
   end
 
   resources :humm do
-    collection do
-      get 'artists'
-      get 'songs'
-      get 'playlists'
-    end
   end
 
 

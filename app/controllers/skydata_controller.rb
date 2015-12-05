@@ -81,6 +81,13 @@ class SkydataController < ApplicationController
     end
   end
 
+  def search
+    results = Skydatum.search(params['term']).pluck('picture_url')
+    respond_to do |format|
+      format.json { render json: results.to_json }
+    end
+  end
+
   def import
 
   Skydatum.import(params[:file])

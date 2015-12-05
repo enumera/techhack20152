@@ -21,21 +21,27 @@
   app.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
 
     $scope.searchArtists = function(count){
-      $http.get('/humm/artists.json?term='+count).then(function(response){
+      $http.get('https://api.myhumm.com/v2/artists?auth=56630bd7ae8c5030388b4567&keyword='+count+'&limit=5&offset=0').then(function(response){
         $scope.artists = response.data.data_response
       });
     };
 
     $scope.searchSongs = function(count){
-      $http.get('/humm/songs.json?term='+count).then(function(response){
+      $http.get('https://api.myhumm.com/v2/songs?auth=56630bd7ae8c5030388b4567&keyword='+count+'&limit=5&offset=0').then(function(response){
         $scope.songs = response.data.data_response
 
       });
     };
 
     $scope.searchPlaylists = function(count){
-      $http.get('/humm/playlists.json?term='+count).then(function(response){
+      $http.get('https://api.myhumm.com/v2/playlists?auth=56630bd7ae8c5030388b4567&keyword='+count+'&limit=5&offset=0').then(function(response){
         $scope.playlists = response.data.data_response
+      });
+    };
+
+    $scope.searchSky = function(count){
+      $http.get('/skydata/search.json?term='+count).then(function(response){
+        
       });
     };
 
