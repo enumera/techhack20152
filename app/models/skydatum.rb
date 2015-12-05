@@ -18,7 +18,7 @@ class Skydatum < ActiveRecord::Base
 
   	  new_search_string = [row["tags"], row["subgenre"], row["name"], row["synopsis"], row["description"] ].join(' ')
   	
-  		Skydatum.create(name: row["name"], programmeref: row["programmeref"], genre: row["genre"], subgenre: row["subgenre"],synopsis: row["synopsis"], tags: row["tags"], description: row["description"], search_string: new_search_string)
+  		Skydatum.create(name: row["name"], programmeref: row["programmeref"], genre: row["genre"], subgenre: row["subgenre"],synopsis: row["synopsis"], tags: row["tags"], description: row["description"], search_string: new_search_string, classification: row["classification"])
   	end
   	
   end
