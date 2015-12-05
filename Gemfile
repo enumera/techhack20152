@@ -7,6 +7,12 @@ gem 'rails', '3.2.17'
 
 gem 'pg'
 
+group :development, :test do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry-rails'
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.

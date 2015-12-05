@@ -1,0 +1,50 @@
+<h1> Import Sky Data Records</h1>
+
+<%= form_tag import_skydata_path, multipart: true do %>
+
+    <%= file_field_tag :file %>
+
+    <%= submit_tag "Import" %>
+
+
+
+<% end %>
+
+
+<h1>Listing skydata</h1>
+
+<table>
+  <tr>
+    <th>Programmeref</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Genre</th>
+    <th>Subgenre</th>
+    <th>Tags</th>
+    <th>Synopsis</th>
+    <th>Classification</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @skydata.each do |skydatum| %>
+  <tr>
+    <td><%= skydatum.programmeref %></td>
+    <td><%= skydatum.name %></td>
+    <td><%= skydatum.description %></td>
+    <td><%= skydatum.genre %></td>
+    <td><%= skydatum.subgenre %></td>
+    <td><%= skydatum.tags %></td>
+    <td><%= skydatum.synopsis %></td>
+    <td><%= skydatum.classification %></td>
+    <td><%= link_to 'Show', skydatum %></td>
+    <td><%= link_to 'Edit', edit_skydatum_path(skydatum) %></td>
+    <td><%= link_to 'Destroy', skydatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Skydatum', new_skydatum_path %>

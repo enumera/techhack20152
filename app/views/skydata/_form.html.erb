@@ -1,0 +1,49 @@
+<%= form_for(@skydatum) do |f| %>
+  <% if @skydatum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@skydatum.errors.count, "error") %> prohibited this skydatum from being saved:</h2>
+
+      <ul>
+      <% @skydatum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :programmeref %><br />
+    <%= f.text_field :programmeref %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :genre %><br />
+    <%= f.text_field :genre %>
+  </div>
+  <div class="field">
+    <%= f.label :subgenre %><br />
+    <%= f.text_field :subgenre %>
+  </div>
+  <div class="field">
+    <%= f.label :tags %><br />
+    <%= f.text_field :tags %>
+  </div>
+  <div class="field">
+    <%= f.label :synopsis %><br />
+    <%= f.text_field :synopsis %>
+  </div>
+  <div class="field">
+    <%= f.label :classification %><br />
+    <%= f.text_field :classification %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

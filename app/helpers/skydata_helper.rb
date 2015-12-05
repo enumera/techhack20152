@@ -1,0 +1,2 @@
+module SkydataHelper
+end

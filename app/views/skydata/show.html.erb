@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Programmeref:</b>
+  <%= @skydatum.programmeref %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @skydatum.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @skydatum.description %>
+</p>
+
+<p>
+  <b>Genre:</b>
+  <%= @skydatum.genre %>
+</p>
+
+<p>
+  <b>Subgenre:</b>
+  <%= @skydatum.subgenre %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= @skydatum.tags %>
+</p>
+
+<p>
+  <b>Synopsis:</b>
+  <%= @skydatum.synopsis %>
+</p>
+
+<p>
+  <b>Classification:</b>
+  <%= @skydatum.classification %>
+</p>
+
+
+<%= link_to 'Edit', edit_skydatum_path(@skydatum) %> |
+<%= link_to 'Back', skydata_path %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  programmeref: MyString
+  name: MyString
+  description: MyString
+  genre: MyString
+  subgenre: MyString
+  tags: MyString
+  synopsis: MyString
+  classification: MyString
+
+two:
+  programmeref: MyString
+  name: MyString
+  description: MyString
+  genre: MyString
+  subgenre: MyString
+  tags: MyString
+  synopsis: MyString
+  classification: MyString
