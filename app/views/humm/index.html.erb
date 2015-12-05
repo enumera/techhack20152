@@ -1,5 +1,25 @@
+<div class="header">
+  <div class="wrap">
+    <div class="logo">
+     <a href="index.html"><%=image_tag "logo.png",  title: "pinbal" %></a>
+    </div>
+    <div class="nav-icon">
+      <a href="#" class="right_bt" id="activator"><span> </span> </a>
+    </div>
+      
+    <div class="top-searchbar">
+      <form>
+        <!-- <input type="text" /> -->
+        <input ng-keyup="searchArtists(count);searchSongs(count);searchPlaylists(count);" ng-model="count" type="text">
+      </form>
+    </div>
+
+    <div class="clear"> </div>
+  </div>
+</div>
+
 <div>
-  <input ng-keyup="searchArtists(count);searchSongs(count);searchPlaylists(count);" ng-model="count">
+
   <div ng-if="artists" ng-hide="user">
     <h1>Artist</h1>
     <div ng-repeat="artist in artists">
@@ -26,3 +46,7 @@
     </div>
   </div>
 </div>
+
+   
+  
+     
