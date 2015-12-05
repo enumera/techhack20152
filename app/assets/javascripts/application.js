@@ -13,3 +13,30 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+(function(){
+  var app = angular.module('myApp', [])
+
+  app.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
+
+    $scope.searchArtists = function(count){
+      $http.get('/humm/artists.json?term='+count).then(function(response){
+        $scope.artists = response.data.data_response
+      });
+    };
+
+    $scope.searchSongs = function(count){
+      $http.get('/humm/songs.json?term='+count).then(function(response){
+        $scope.songs = response.data.data_response
+
+      });
+    };
+
+    $scope.searchPlaylists = function(count){
+      $http.get('/humm/playlists.json?term='+count).then(function(response){
+        $scope.playlists = response.data.data_response
+      });
+    };
+
+  }]);
+})();
