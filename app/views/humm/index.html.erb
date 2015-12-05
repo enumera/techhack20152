@@ -1,0 +1,27 @@
+<div>
+  <input ng-keyup="searchArtists(count);searchSongs(count);searchPlaylists(count);" ng-model="count">
+  <div ng-if="artists" ng-hide="user">
+    <h1>Artist</h1>
+    <div ng-repeat="artist in artists">
+      <div class="each-result">
+        <div>{{artist.account.name.first}}</div>
+      </div>
+    </div>
+  </div>
+  <div ng-if="songs" ng-hide="user">
+    <h1>Song</h1>
+    <div ng-repeat="song in songs">
+      <div class="each-result">
+        <div>{{song.title}}</div>
+      </div>
+    </div>
+  </div>
+  <div ng-if="playlists" ng-hide="user">
+    <h1>Playlist/Album</h1>
+    <div ng-repeat="playlist in playlists">
+      <div class="each-result">
+        <div>{{playlist.title}}</div>
+      </div>
+    </div>
+  </div>
+</div>
