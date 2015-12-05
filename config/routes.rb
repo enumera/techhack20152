@@ -6,11 +6,6 @@ Techhack20152::Application.routes.draw do
   end
 
   resources :humm do
-    collection do
-      get 'artists'
-      get 'songs'
-      get 'playlists'
-    end
   end
 
 
