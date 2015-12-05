@@ -39,7 +39,15 @@
   <b>Classification:</b>
   <%= @skydatum.classification %>
 </p>
+<p>
+  <b> Search String</b>
+  <%= @skydatum.search_string %>
+</p>
 
+
+<div style="height:50px; width: 50px;">
+  <img src= <%=@skydatum.picture_url %> />
+</div>
 
 <%= link_to 'Edit', edit_skydatum_path(@skydatum) %> |
 <%= link_to 'Back', skydata_path %>
